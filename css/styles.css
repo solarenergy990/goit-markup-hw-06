@@ -10,6 +10,7 @@
 
   --secondary-font-family: Raleway, sans-serif;
   --primary-text-weight: 400;
+  --rare-text-weight: 700;
   --primary-text-size: 14px;
   --secondary-text-size: 16px;
 }
@@ -301,9 +302,161 @@ ul {
   height: 30px;
 
   background-color: var(--main-white);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   display: block;
   cursor: pointer;
+}
+.close-button:active,
+.close-button:hover,
+.close-button:focus {
+  fill: var(--accent);
+}
+
+.input {
+  margin: 0;
+  padding: 10px 41px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+.input:hover {
+  border: 1px solid var(--accent);
+}
+.input::placeholder {
+  font-family: inherit;
+  font-weight: var(--primary-text-weight);
+  font-size: var(--primary-text-size);
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form {
+  padding: 40px;
+}
+.form p {
+  margin-top: 0;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+
+  font-family: inherit;
+  font-weight: var(--rare-text-weight);
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+.signup li {
+  margin-bottom: 10px;
+}
+.signup li:last-child {
+  margin-bottom: 20px;
+}
+.label-name {
+  display: flex;
+  margin-bottom: 4px;
+  color: var(--primary-text-colour);
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+.label .input-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  display: flex;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.label:focus-within .input-icon,
+.label:hover .input-icon {
+  fill: var(--accent);
+}
+.label textarea {
+  resize: none;
+  padding: 12px 16px;
+}
+.submit-button {
+  background-color: var(--accent);
+  color: var(--main-white);
+
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: var(--rare-text-weight);
+  font-size: var(--secondary-text-size);
+  line-height: 1.9;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  border-style: unset;
+  border-radius: 4px;
+  padding: 10px 55px;
+  display: block;
+  cursor: pointer;
+
+  margin: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.check-text {
+  display: flex;
+
+  color: var(--primary-text-colour);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--primary-text-size);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+.check-text a {
+  color: var(--accent);
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.check-icon {
+  display: flex;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid var(--secondary-text-colour);
+  border-radius: 2px;
+}
+.checkbox:checked ~ .check-icon {
+  border-color: transparent;
+  background-color: var(--accent);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
 /* section */
 .list-item-icon {
@@ -716,4 +869,58 @@ ul {
   color: var(--main-white);
   margin-top: 0;
   margin-bottom: 20px;
+}
+.footer-banner div {
+  margin-right: 93px;
+}
+.subscribe {
+  margin-top: 0;
+  margin-bottom: 20px;
+  width: 100%;
+
+  font-family: inherit;
+  font-weight: var(--rare-text-weight);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-white);
+  display: block;
+}
+.footer-input {
+  display: flex;
+  margin: 0;
+  margin-right: 12px;
+  padding: 15px 16px;
+  width: 348px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+}
+.footer-button {
+  background-color: var(--accent);
+  color: var(--main-white);
+
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: var(--rare-text-weight);
+  font-size: var(--secondary-text-size);
+  line-height: 1.9;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  border-style: unset;
+  border-radius: 4px;
+  padding: 10px 29px;
+  display: flex;
+  cursor: pointer;
+}
+.footer-label {
+  display: flex;
+}
+.footer-button span {
+  margin-right: 10px;
 }

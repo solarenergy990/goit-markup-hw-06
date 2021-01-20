@@ -61,12 +61,66 @@
             </div>
             <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
-                    <button class="close-button" data-modal-close type="button"><span
-                            class="visually-hidden">закрыть</span>
-                        <svg width="11" height="11">
-                            <use xlink:href="./images/symbol-defs.svg#icon-cross"></use>
-                        </svg>
-                    </button>
+                    <form name="signup-form">
+                        <div class="form">
+                            <p>Оставьте свои данные, мы вам перезвоним</p>
+                            <ul class="signup list">
+                                <li class="list">
+                                    <label class="label">
+                                        <span class="label-name">Имя</span>
+                                        <input type="text" name="name" class="input">
+                                        <div class="input-icon">
+                                            <svg width="18" height="18">
+                                                <use xlink:href="./images/symbol-defs.svg#icon-person-black"></use>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="list">
+                                    <label class="label">
+                                        <span class="label-name">Телефон</span>
+                                        <input type="tel" name="tel" class="input">
+                                        <div class="input-icon">
+                                            <svg width="18" height="18">
+                                                <use xlink:href="./images/symbol-defs.svg#icon-phone-black"></use>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="list">
+                                    <label class="label">
+                                        <span class="label-name">Почта</span>
+                                        <input type="email" name="email" class="input">
+                                        <div class="input-icon">
+                                            <svg width="18" height="18">
+                                                <use xlink:href="./images/symbol-defs.svg#icon-email-black"></use>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="list">
+                                    <label class="label">
+                                        <span class="label-name">Комментарий</span>
+                                        <textarea name="feedback" rows="5" class="input"
+                                            placeholder="Введите текст"></textarea>
+                                    </label>
+                                </li>
+                            </ul>
+                            <label class="check-label">
+                                <input type="checkbox" name="agreement" class="checkbox">
+                                <span class="check-text">Соглашаюсь с рассылкой и принимаю <a href="#">Условия
+                                        договора</a></span>
+                                <span class="check-icon"></span>
+                            </label>
+                            <button type="submit" class="submit-button">Отправить</button>
+                        </div>
+                        <button class="close-button" data-modal-close type="button"><span
+                                class="visually-hidden">закрыть</span>
+                            <svg width="11" height="11">
+                                <use xlink:href="./images/symbol-defs.svg#icon-cross"></use>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -404,6 +458,17 @@
                     </li>
                 </ul>
             </div>
+            <form class="footer-form">
+                <p class="subscribe">Подпишитесь на рассылку</p>
+                <label class="footer-label">
+                    <input type="email" name="email" class="footer-input" placeholder="E-mail">
+                    <button type="submit" class="footer-button"><span>Подписаться</span>
+                        <svg width="24" height="24">
+                            <use xlink:href="./images/symbol-defs.svg#icon-icon-send"></use>
+                        </svg>
+                    </button>
+                </label>
+            </form>
         </div>
     </footer>
     <script src="./js/modal.js"></script>
